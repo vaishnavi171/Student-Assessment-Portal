@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <title>Article Publication</title>
+	 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>tinymce.init({selector:'textarea'});</script>
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	 <link rel="stylesheet" href="assets/css/article.css">
+</head>
+<body>
+
+	<div class="container">
+	 
+		<div class="wrapper">
+			
+			<div class="heading">
+				<h1>Publish Article</h1>
+			</div>
+			
+			<div class="info">
+				<form>
+					<p>
+						<label>Article title</label>
+						<input type="text" name="title" required="required">
+					</p></br>
+					<p>
+						<label>Article Description</label>
+						<input type="text" name="des"  required="required">
+					</p></br>
+					<p>
+						<label for="cat">Select Category</label>
+						  <select id="Department" name="department">
+						  <option value="comp">Computer Subject</option>
+						  <option value="ds">Data Structure</option>
+						  <option value="algo">Algorithms</option>
+						  <option value="analyse">Analysis</option>
+						  <option value="apt">Aptitude</option>
+						  <option value="program">Competitive Programming</option>
+						  <option value="cat">CAT</option>
+						  <option value="puzzle">Puzzles</option>
+						  <option value="others">Others</option>
+						  </select>
+						
+					</p>
+					<p>
+						<label> If Other, Enter</label>
+						<input type="text" name="others">
+					</p>
+					<p class="full">
+						<label>Post here</label>
+						<textarea name="publish" rows="30"></textarea>
+					
+					</p>	
+					<p>
+						<label for="myfile">Select a file:</label>
+						<input type="file" id="myfile" name="myfile">
+					</p></br>
+					
+					
+						<button class="btn1">Preview</button>
+						<button class="btn2">Submit</button>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</body> 
+</html>

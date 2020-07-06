@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complaint choose</title>
+	<!--<link rel="stylesheet" type="text/css" href="complaintchoose.css">-->
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Poppins',sans-serif;
+	background: #efa8e4;
+}
+
+.container{
+	
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+ .brand{
+    text-align: center;
+    margin-left: 380px;
+    font-size:40px;
+  }
+  
+
+.container .box:before{
+	content: '';
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	top:100;
+	left:0;
+	background: rgba(255,255,255,.2);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.container .box{
+	position: relative;
+	width:500px;
+	padding: 40px;
+	background: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,.1);
+	border-radius: 10px;
+	margin: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-align: center;
+}
+.container .box .icon{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	color: #fff;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 50%;
+	font-size: 40px;
+	font-weight: 700;
+	transition: 1s;
+}
+
+.container .box:nth-child(1).icon{
+	box-shadow: 0 0 0 0 #e91e63;
+	background: #e91e63;
+}
+
+.container .box:nth-child(1):hover .icon{
+	box-shadow: 0 0 0 400px #e91e63;
+}
+
+.container .box:nth-child(2).icon{
+	box-shadow: 0 0 0 0 #e91e63;
+	background: #e91e63;
+}
+
+.container .box:nth-child(2):hover .icon{
+	box-shadow: 0 0 0 400px #e91e63;
+}
+
+.container .box .content{
+	position: relative;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+.container .box:hover .content{
+	color: #fff;
+	transform:scale(1.1);
+}
+
+
+.container .box .content h2{
+	font-size: 20px;
+	margin:10px 0;
+	padding: 0;
+}
+
+.container .box .content p{
+	margin: 0;
+	padding: 0;
+}
+a{
+	display: inline-block;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #000;
+	font-weight: 500;
+	margin-top: 20px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<h1 class="brand">Share your Greviances!!!</h1>
+
+		<div class="box">
+			<div class="icon">&#11088;</div>
+			<div class="content">
+				<h2>CODING</h2>
+				<p>If u have any grievances regarding coding share here</p>
+				<a href="codingcomplaint.html">GO&#128073;</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="icon">&#11088;</div>
+			<div class="content">
+				<h2>MCQ</h2>
+				<p>If u have any grievances regarding objective types share here</p>
+				<a href="mcqcomplaint.html">GO&#128073;</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

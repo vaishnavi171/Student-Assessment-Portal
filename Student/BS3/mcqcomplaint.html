@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="assets/css/mcqcomplaintcss.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+<style>
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+textarea{
+  width:500px;
+}
+.txt input{
+  width: 100%;
+  margin: 10px;
+  border:none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid;
+  font-size: 18px;
+  margin-top: 6px;
+}
+</style>
+</head>
+<body>
+<div class="contain">
+<h1 class="brand"><span>Enter</span> your <span>Grievances</span></h1>
+<div class="wrapper animated bounceInLeft">
+  <div class="company-info">
+        <h3 style="color:#efa8e4">Complaint Form</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> 44 Something st</li>
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i class="fa fa-envelope"></i> onlinetest@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3 style="color: #efa8e4;">Email Us</h3>
+        <form>
+<div class="txt">
+<label class="container">Unable to submit
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Wrong Question
+  <input type="checkbox" id="mycheck" onclick="myFunction()">
+  <span class="checkmark"></span>
+</label>
+<input type="text" placeholder="Specify test name" id="wtc" style="display: none">
+<input type="text" placeholder="Specify question no" id="wtc1" style="display: none">
+
+<label class="container">No tests assigned
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Wrong options
+  <input type="checkbox" id="mycheck1" onclick="fun()">
+  <span class="checkmark"></span>
+</label>
+<input type="text" placeholder="Specify the test name" id="wq" style="display: none">
+<input type="text" placeholder="Specify the question no" id="wq1" style="display: none">
+<p class="full"><label>Any other Complaints?</label>
+<textarea rows="5" cols="50" style="width: 100%"></textarea></p>
+
+<button>Submit</button></form>
+</div></div></div></div>
+<script type="text/javascript">
+  function myFunction()
+  {
+    var checkbox=document.getElementById("mycheck");
+    var wtc=document.getElementById("wtc");
+    var wtc1=document.getElementById("wtc1");
+    if(checkbox.checked==true)
+    {
+      wtc.style.display="block";
+      wtc1.style.display="block";
+    }
+    else
+    {
+      wtc.style.display="none";
+      wtc1.style.display="none";
+    }
+  }
+  function fun()
+  {
+    var checkbox=document.getElementById("mycheck1");
+    var wtc=document.getElementById("wq");
+    var wtc1=document.getElementById("wq1");
+    if(checkbox.checked==true)
+    {
+      wtc.style.display="block";
+      wtc1.style.display="block";
+    }
+    else
+    {
+      wtc.style.display="none";
+      wtc1.style.display="none";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+  }
+
+body{
+  background:#efa8e4;
+  color:#485e74;
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+
+.container{
+  max-width:1500px;
+  max-height: 5000px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#f8e1f4;
+  
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background:#fff0f5;
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap:20px;
+}
+
+.contact form label .la{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+.contact form button,.contact form textarea{
+  width:1000px;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+  background:#97e5ef;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:800px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 0.6fr 3fr;
+  }
+
+  .wrapper > *{
+    padding:0.5em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+}
+
+input[type=text] {
+  width: 130px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 80px;
+  font-size: 12px;
+  background-color: white;
+  background-image: url('C:\xampp\htdocs\Twinkle\Student\BS3\searchicon.jpg');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 0px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin:2px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+.pagination{
+  display: inline-block;
+}
+.pagination a {
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: dodgerblue;}
+
+#three{
+    width: 70%;
+    height:500px;
+    border: 1px solid lime; 
+}
+#thre{
+    width: 22%;
+    height:500px;
+    border: 1px solid lime; 
+    margin-left: 780px;
+    margin-top:-500px;
+}
+

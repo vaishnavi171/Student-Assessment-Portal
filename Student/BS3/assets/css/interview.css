@@ -1,0 +1,89 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background:#92bde7;
+  color:#485e74;
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+.container{
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+
+
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.heading{
+  background:#c9e6ff;
+}
+
+.heading h1{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.info{
+  background:#f9feff;
+}
+
+/* FORM STYLES */
+.info form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:20px;
+}
+
+.info form label{
+  display:block;
+}
+.info form select{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.info form p{
+  margin:0;
+}
+
+.info form .full{
+  grid-column: 1 / 3;
+}
+
+.info form input, .info form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.info form button{
+  width:100%;
+  
+  padding:1em;
+  border:1px solid #c9e6ff;
+  background:#c9e6ff;
+  border:0;
+  text-transform: uppercase;
+}
+
+.info form button:hover,.info form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+

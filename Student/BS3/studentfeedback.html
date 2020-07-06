@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Feedback form</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <style type="text/css">
+  	*{
+    box-sizing: border-box;
+  }
+
+body{
+  background:#efa8e4;
+  color:#485e74;
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+
+.rating { 
+  border: none;
+  float: left;
+
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.5em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } 
+
+.rating > input:checked + label:hover, 
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+.container{
+  max-width:1176px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#f8e1f4;
+  
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background:#fff0f5;
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap:20px;
+}
+
+.contact form label .la{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+
+.custom {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.custom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.custom:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.custom input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.custom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.custom .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+
+.contact form button,.contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+  background:#97e5ef;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding:0.5em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Student</span> Online Assessment <span>Portal</span></h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3 style="color:#efa8e4">Feedback Form</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> 44 Something st</li>
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i class="fa fa-envelope"></i> onlinetest@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3 style="color: #efa8e4;">Share your opinion</h3>
+        <form>
+          <p>
+            <label class="la">Does the site user friendly?</label>
+          </p>
+          <p>
+            <label class="custom">Not at all&nbsp;
+            <input type="radio" name="name" value="Not at all"><span class="checkmark"></span></label>
+            <label class="custom">Not really&nbsp;
+            <input type="radio" name="name" value="Not really"><span class="checkmark"></span></label>
+            <label class="custom">Somewhat&nbsp;
+            <input type="radio" name="name" value="Somewhat"><span class="checkmark"></span></label>
+            <label class="custom">Mostly&nbsp;
+            <input type="radio" name="name" value="Mostly"><span class="checkmark"></span></label>
+            <label class="custom">Definitely
+            <input type="radio" name="name" value="Definitely"><span class="checkmark"></span></label>
+          </p>
+          <p>
+          	<label class="la">Would you recommend our site to your friends?</label>
+          </p>
+          <p>
+            <label class="custom">Not at all&nbsp;
+            <input type="radio" name="nam" value="Not at all"><span class="checkmark"></span></label>
+            <label class="custom">Not really&nbsp;
+            <input type="radio" name="nam" value="Not really"><span class="checkmark"></span></label>
+            <label class="custom">Somewhat&nbsp;
+            <input type="radio" name="nam" value="Somewhat"><span class="checkmark"></span></label>
+            <label class="custom">Mostly&nbsp;
+            <input type="radio" name="nam" value="Mostly"><span class="checkmark"></span></label>
+            <label class="custom">Definitely
+            <input type="radio" name="nam" value="Definitely"><span class="checkmark"></span></label>
+          </p>
+          <p>
+            <label class="la">Does the assessments are valuable?</label>
+          </p>
+          <p>
+            <label class="custom">Not at all&nbsp;
+            <input type="radio" name="na" value="Not at all"><span class="checkmark"></span></label>
+            <label class="custom">Not really&nbsp;
+            <input type="radio" name="na" value="Not really"><span class="checkmark"></span></label>
+            <label class="custom">Somewhat&nbsp;
+            <input type="radio" name="na" value="Somewhat"><span class="checkmark"></span></label>
+            <label class="custom">Mostly&nbsp;
+            <input type="radio" name="na" value="Mostly"><span class="checkmark"></span></label>
+            <label class="custom">Definitely
+            <input type="radio" name="na" value="Definitely"><span class="checkmark"></span></label>
+          </p>
+          
+          <p>
+            <label class="la">How would you rate our site?</label>
+          </p>
+          
+          <label>
+          <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Neutral - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Neutral - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Bad - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Worst - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Worst - 0.5 stars"></label>
+</fieldset></label>
+          <p class="full">
+            <label class="la">Do you have any suggestions?</label>
+            <textarea name="message" rows="5"></textarea>
+          </p>
+          <p class="full">
+            <button>Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

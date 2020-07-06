@@ -1,0 +1,145 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background:#92bde7;
+  color:#485e74;
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+.container{
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+ul{
+  list-style: none;
+  padding:0;
+}
+
+
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#c9e6ff;
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background:#f9feff;
+}
+.rep
+{
+  background-color: pink;
+  margin-top: -45px;
+  color:black;
+  border-radius: 3px;
+  float: right;
+}
+.pagination a
+{ margin-left: -10px;
+   color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 3px;
+}
+
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+/* FORM STYLES */
+.contact form{
+  display: inline;
+  
+  grid-gap:25px;
+}
+
+
+
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+.contact form button{
+  width:20%;
+  padding:1em;
+  border:1px solid yellow;
+}
+
+.contact form button{
+  background:yellow;
+  border:0;
+  text-transform: uppercase;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+  padding:8px 16px;
+}
+a:hover
+{
+  background-color: #ddd;
+  color:black;
+}
+
+.prev
+{
+  margin-top: -30px;
+  background-color: #4caff0;
+  color:black;
+  border-radius: 5px;
+  float: left;
+}
+.next
+{
+  margin-top: -30px;
+  background-color: #4caff0;
+  color:black;
+  border-radius: 5px;
+  float: right;
+}
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding:2em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+}
